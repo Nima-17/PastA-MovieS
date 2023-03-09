@@ -1,0 +1,12 @@
+/* color palette from <https://github.com/vuejs/theme> */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+  background: #18122B;
+  font-family: 'Nunito', sans-serif;
+}
