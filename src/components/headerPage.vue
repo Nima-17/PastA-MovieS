@@ -1,28 +1,23 @@
 <script></script>
 <template>
-  <nav class="text-indigo-400 flex justify-between p-1 items-center">
-    <div class="flex">
-      <div class="mx-3"></div>
-      <button class="p-2 cursor-pointer">
-        <font-awesome-icon size="lg" icon="fa-solid fa-sun" />
+  <nav class="text-indigo-400 flex justify-between p-2 items-center">
+    <div>
+      <button class="cursor-pointer">
+        <router-link to="/">
+          <font-awesome-icon size="lg" icon="fa-solid fa-home" />
+        </router-link>
       </button>
     </div>
-    <div class="flex text-center">
-      <p class="text-shadow hover:shadow-indigo-400 shadow-lg transition hover:bg-indigo-500 text-indigo-200 ml-14 text-center cursor-default text-xl font-semibold">
+    <div>
+      <p class="text-shadow text-indigo-400 text-center cursor-default text-xl font-semibold">
         PastA MovieS
       </p>
     </div>
-    <div class="flex">
-      <button
-        class="hover:shadow-indigo-400 shadow-lg transition hover:bg-indigo-500 rounded-md hover:text-white p-2"
-      >
-        Sign Up
-      </button>
-      <div class="divider mx-3"></div>
-      <button
-        class="hover:shadow-indigo-400 shadow-lg transition hover:bg-indigo-500 rounded-md hover:text-white p-2"
-      >
-        Sign In
+    <div>
+      <button>
+        <router-link to="/">
+          <font-awesome-icon class="transition-all" size="lg" icon="fa-solid fa-user" />
+        </router-link>
       </button>
     </div>
   </nav>
@@ -30,7 +25,8 @@
 
 <style scoped>
 .text-shadow {
-  text-shadow: 2px 2px 8px rgb(129 140 248);
+  text-shadow: 1px 1px 15px rgb(129, 140, 248);
+  transition: 0.5s ease;
 }
 .divider {
   border-right: 1px solid rgb(129 140 248);

@@ -39,11 +39,9 @@ const routes = [
   }
 ]
 
-
-
 const router = createRouter({
   history: createWebHistory(),
-  RouterLink,  
+  RouterLink,
   routes
 })
 

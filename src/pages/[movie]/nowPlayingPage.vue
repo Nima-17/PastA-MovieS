@@ -1,7 +1,12 @@
 <script lang="js">
 import axios from 'axios'
+import headerPage from '../../components/headerPage.vue'
 
 export default {
+  components: {
+    headerPage
+  },
+
   data() {
     return {
       posts: []
@@ -17,6 +22,7 @@ export default {
 </script>
 
 <template>
+  <headerPage></headerPage>
   <section class="grid grid-rows-5 grid-cols-4 gap-4 p-3 text-center">
     <div
       class="shadow-2xl cursor-pointer text-black font-semibold shadow-indigo-400 relative"
