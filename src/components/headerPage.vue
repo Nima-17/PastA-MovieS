@@ -1,12 +1,10 @@
 <script></script>
 <template>
-  <nav class="text-indigo-400 flex justify-between p-2 items-center">
+  <nav class="text-indigo-400 flex justify-between p-3 items-center">
     <div>
-      <button class="cursor-pointer">
-        <router-link to="/">
-          <font-awesome-icon size="lg" icon="fa-solid fa-home" />
-        </router-link>
-      </button>
+      <router-link to="/">
+        <font-awesome-icon size="lg" icon="fa-solid fa-home" />
+      </router-link>
     </div>
     <div>
       <p class="text-shadow text-indigo-400 text-center cursor-default text-xl font-semibold">
@@ -14,11 +12,9 @@
       </p>
     </div>
     <div>
-      <button>
-        <router-link to="/">
-          <font-awesome-icon class="transition-all" size="lg" icon="fa-solid fa-user" />
-        </router-link>
-      </button>
+      <router-link to="/">
+        <font-awesome-icon class="transition-all" size="lg" icon="fa-solid fa-user" />
+      </router-link>
     </div>
   </nav>
 </template>

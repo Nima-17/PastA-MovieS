@@ -6,36 +6,64 @@ import OntvPage from '../pages/[tv]/ontvPage.vue'
 import nowPlayingPage from '../pages/[movie]/nowplayingPage.vue'
 import popularmPage from '../pages/[movie]/popularmPage.vue'
 import topratedPage from '../pages/[movie]/topratedPage.vue'
+import aboutPage from '../pages/[aboutMe]/aboutPage.vue'
 
 const routes = [
   {
     path: '/',
-    component: HomePage
+    component: HomePage,
+    meta : {
+      title: 'PastA MovieS'
+    }
   },
   {
     path: '/tv/airing-today',
-    name: 'Airing_Today',
-    component: AiringTodayPage
+    component: AiringTodayPage,
+    meta: {
+      title: 'Tv - AiringToday'
+    }
   },
   {
     path: '/tv/ontv',
-    component: OntvPage
+    component: OntvPage,
+    meta: {
+      title: 'Tv - OnTv'
+    }
   },
   {
     path: '/tv/popular',
-    component: PopularPage
+    component: PopularPage,
+    meta: {
+      title: 'Tv - Popular'
+    }
   },
   {
     path: '/movie/now-playing',
-    component: nowPlayingPage
+    component: nowPlayingPage,
+    meta: {
+      title: 'Movie - NowPlaying'
+    }
   },
   {
     path: '/movie/popular',
-    component: popularmPage
+    component: popularmPage,
+    meta: {
+      title: 'Movie - Popular'
+    }
   },
   {
     path: '/movie/top-rated',
-    component: topratedPage
+    component: topratedPage,
+    meta: {
+      title: 'Movie - TopRated'
+    }
+  },
+  {
+    path: '/about-me',
+    component: aboutPage,
+    meta: {
+      title: 'AboutMe'
+    }
   }
 ]
 
@@ -43,6 +71,11 @@ const router = createRouter({
   history: createWebHistory(),
   RouterLink,
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  document.title = `${to.meta.title}`
+  next()
 })
 
 export default router
