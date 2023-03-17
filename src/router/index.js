@@ -6,7 +6,8 @@ import OntvPage from '../pages/[tv]/ontvPage.vue'
 import nowPlayingPage from '../pages/[movie]/nowplayingPage.vue'
 import popularmPage from '../pages/[movie]/popularmPage.vue'
 import topratedPage from '../pages/[movie]/topratedPage.vue'
-import aboutPage from '../pages/[aboutMe]/aboutPage.vue'
+import contactPage from '../pages/[contact]/contactPage.vue'
+import notFoundPage from '../pages/notFoundPage.vue'
 
 const routes = [
   {
@@ -59,10 +60,17 @@ const routes = [
     }
   },
   {
-    path: '/about-me',
-    component: aboutPage,
+    path: '/contact',
+    component: contactPage,
     meta: {
-      title: 'AboutMe'
+      title: 'ContactWithMe'
+    }
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    component: notFoundPage,
+    meta: {
+      title: 'Not Found - 404'
     }
   }
 ]

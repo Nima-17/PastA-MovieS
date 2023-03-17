@@ -23,7 +23,7 @@ export default {
 
 <template>
   <headerPage></headerPage>
-  <section class="grid grid-rows-5 grid-cols-4 gap-4 p-3 text-center">
+  <section id="grid-container" class="gap-1 p-3 text-center">
     <div
       class="shadow-2xl cursor-pointer text-black font-semibold shadow-indigo-400 relative"
       v-for="post in posts"
@@ -36,3 +36,12 @@ export default {
     </div>
   </section>
 </template>
+
+<style scoped>
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+</style>

@@ -6,7 +6,7 @@
       class="flex lg:flex-row flex-col p-7 items-center justify-around"
     >
       <!-- Left Part -->
-      <div class="text-center lg:text-lg md:text-lg sm:text-lg text-sm text-indigo-400">
+      <div class="text-center text-indigo-400">
         <h1 class="text-3xl tracking-wide cursor-default">TV</h1>
         <div class="my-2"></div>
         <RouterLink to="/tv/airing-today">
@@ -39,9 +39,7 @@
         </div>
       </div>
       <!-- Right Part -->
-      <div
-        class="text-center mt-6 lg:mt-0 lg:text-lg md:text-lg sm:text-lg text-sm text-indigo-400"
-      >
+      <div class="text-center mt-6 lg:mt-0 text-indigo-400">
         <h1 class="text-3xl tracking-wide cursor-default">Movies</h1>
         <div class="my-2"></div>
         <!-- top -->

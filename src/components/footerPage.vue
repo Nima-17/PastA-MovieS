@@ -1,6 +1,6 @@
 <script></script>
 <template>
-  <footer class="bg-transparent text-sm text-indigo-900 lg:p-1 p-0">
+  <footer class="bg-transparent text-sm text-indigo-900 lg:p-1 p-1">
     <seciton class="flex justify-center font-semibold items-center">
       <div class="text-shadow">
         <font-awesome-icon size="lg" class="text-shadow mr-1" icon="fa-solid fa-code" />
@@ -18,15 +18,10 @@
       </div>
       <div class="mx-3 lg:mx-9"></div>
       <div class="text-shadow">
-        <RouterLink to="/about-me">
+        <RouterLink to="/contact">
           <font-awesome-icon size="lg" class="text-shadow mr-1" icon="fa-solid fa-phone" />
-          <span>About Me</span>
+          <span>Contact</span>
         </RouterLink>
-      </div>
-      <div class="mx-3 lg:mx-9"></div>
-      <div class="text-shadow">
-        <font-awesome-icon size="lg" class="text-shadow mr-1" icon="fa-solid f fa-clock" />
-        <a href="https://wakatime.com/@NimaDev">WakaTime</a>
       </div>
     </seciton>
   </footer>
