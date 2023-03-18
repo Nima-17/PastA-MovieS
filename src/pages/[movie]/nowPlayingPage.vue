@@ -23,25 +23,56 @@ export default {
 
 <template>
   <headerPage></headerPage>
-  <section id="grid-container" class="gap-1 p-3 text-center">
+  <section id="grid-container" class="p-3 text-center">
     <div
-      class="shadow-2xl cursor-pointer text-black font-semibold shadow-indigo-400 relative"
+      id="card"
+      class="shadow-2xl text-black font-semibold shadow-indigo-400 relative"
       v-for="post in posts"
       :key="post.id"
     >
-      <div class="back-glass flex justify-center items-end absolute right-0 top-0 left-0 bottom-0">
-        <p class="w-full bg-white">{{ post.title }}</p>
+      <div class="flex justify-center items-center absolute top-0 left-0 right-0 bottom-0">
+        <p id="name" class="p-1 text-white">
+          Name: <br />
+          {{ post.title }} <br />
+          Release Date: <br />
+          {{ post.release_date }}
+        </p>
       </div>
-      <img class="image" v-bind:src="'https://image.tmdb.org/t/p/original' + post.poster_path" />
+      <img v-bind:src="'https://image.tmdb.org/t/p/original' + post.poster_path" />
     </div>
   </section>
 </template>
 
 <style scoped>
+@media screen and (min-width: 704px) {
+  #grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(6, minmax(0, 1fr));
+  }
+}
+
+#name {
+  opacity: 0;
+  font-size: small;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 4px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  text-shadow: 2px 2px 10px black;
+}
+
+#card:hover #name {
+  opacity: 1;
+  transition: all 0.25s ease-in;
+}
+
 #grid-container {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-template-rows: repeat(5, minmax(0, 1fr));
-  gap: 10px;
+  gap: 8px;
 }
 </style>

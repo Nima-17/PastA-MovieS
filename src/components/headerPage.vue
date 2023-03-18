@@ -12,9 +12,7 @@
       </p>
     </div>
     <div>
-      <router-link to="/">
-        <font-awesome-icon class="transition-all" size="lg" icon="fa-solid fa-user" />
-      </router-link>
+      <font-awesome-icon class="transition-all" size="lg" icon="fa-solid fa-film" />
     </div>
   </nav>
 </template>

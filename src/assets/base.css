@@ -10,3 +10,20 @@ body {
   background: #18122B;
   font-family: 'Nunito', sans-serif;
 }
+
+#name {
+  opacity: 0;
+  font-size: small;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 4px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  text-shadow: 2px 2px 10px black;
+}
+
+#card:hover #name {
+  opacity: 1;
+  transition: all 0.25s ease-in;
+}

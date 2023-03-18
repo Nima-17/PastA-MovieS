@@ -13,7 +13,7 @@ const routes = [
   {
     path: '/',
     component: HomePage,
-    meta : {
+    meta: {
       title: 'PastA MovieS'
     }
   },

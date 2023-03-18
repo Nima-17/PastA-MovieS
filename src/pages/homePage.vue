@@ -12,7 +12,7 @@ export default {
 }
 </script>
 <template>
-    <headerPage />
-    <mainPage />
-    <footerPage />
+  <headerPage />
+  <mainPage />
+  <footerPage />
 </template>
